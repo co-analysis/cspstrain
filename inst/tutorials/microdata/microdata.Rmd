@@ -1,0 +1,102 @@
+---
+title: "CSPS microdata training"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(gradethis)
+library(learnr)
+library(tidyverse)
+
+tutorial_options(exercise.checker = gradethis::grade_learnr)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, error = FALSE)
+
+path <- "https://github.com/matt-dray/cspstrain/blob/master/data/csps-synth-small.RDS"
+data <- readRDS(path)
+```
+
+
+## Introduction
+
+### What this is and isn't
+
+This tutorial is an introduction to dealing with Civil Service People Survey (CSPS) microdata using R.
+
+Throughout the tutorial you'll be asked to type R code into boxes.
+
+The tutorial isn't intended as a proper introduction to R, though it does assume that you're a beginner.
+
+### Using this tutorial
+
+On the left is the navigation bar. You can jump to different sections of the tutorial from here.
+
+Beneath it are the words 'Start over'. If you click here then the tutorial will be completely reset.
+
+The code execution blocks say 'Code' in the top-left corner. They will typically have three buttons:
+
+* the blue 'Run Code' button executes the code you've written and displays the outputs underneath the box
+* 'Start Over' returns the box to its initial state
+* clicking 'Hint' will show a pop-up with information to help you
+
+Below is a code box example. Type 'hello' (all lowercase) between the quotation marks and press 'Run Code' to print your statement.
+
+```{r hello, exercise = TRUE}
+print("")
+```
+
+```{r hello-solution}
+print("hello")
+```
+
+```{r hello-check}
+# grade_result(
+#   pass_if(~identical(.result, "Hello"), "Hello to you too.")
+# )
+
+grade_code("Hello to you too.")
+```
+
+
+### A note on the data
+
+The data set used in this package isn't real. None of the rows represent results from real respondents.
+
+Instead, the data set is _synthetic_. This means that the distribution of results within any given variable is representative of the real data set, but none of the rows represent a real person's responses.
+
+## Look
+
+I've already loaded the data set for you. It's available as a data frame named `data`. You can view it by typing 'data' in the box below and clicking the blue 'Run' button in the upper right corner of the box.
+
+```{r print, exercise=TRUE}
+
+```
+
+You'll see that the data set has a number of rows and columns containing data. The absence of data is denoted as `NA`.
+
+It's often a bit much to print _all_ the data at once. You can supply the name of the data frame to the `head()` function to limit the output to just the first few rows. Try that now.
+
+```{r head, exercise=TRUE}
+
+```
+
+If you're having trouble, you can click the hint button for advice.
+
+
+```{r glimpse, exercise=TRUE}
+
+```
+
+```{r nrow, exercise=TRUE}
+
+```
+
+```{r length, exercise=TRUE}
+
+```
+
+## Wrangle
+
+## Derive
+
+## Plot
